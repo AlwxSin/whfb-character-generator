@@ -1,7 +1,7 @@
 import pprint
 from generator import CharacterGenerator
 
-char = CharacterGenerator('dwarf', 'M')
+char = CharacterGenerator('human', 'M')
 
 pp = pprint.PrettyPrinter(indent=4)
 pp.pprint(char.characteristics)

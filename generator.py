@@ -1,5 +1,5 @@
 from random import randint, choice
-from tables import careers, characteristics, fate_points, talents, wounds
+from tables import careers, characteristics, fate_points, talents, wounds, skills
 from tables.cosmetics import looks, names, others
 
 
@@ -77,10 +77,14 @@ class CharacterGenerator:
         self.skills = skills.BASE_SKILLS[self.race]
 
     def get_talents(self):
-        pass
+        self.talents = talents.RACE_TALENTS[self.race]
+        for talent in self.talents:
+            self.apply_talent(talent)
 
-    def apply_talent(self):
-        pass
+    def apply_talent(self, talent):
+        chars = talent['chars'] if 'chars' in talent else []
+        for char in chars:
+            self.characteristics[char] += chars[char]
 
     def get_career(self):
         pass
