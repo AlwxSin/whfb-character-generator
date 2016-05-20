@@ -1,4 +1,4 @@
-STARTINT_CAREERS = {
+STARTINTG_CAREERS = {
     'Agitator': {
         'races_list': ['dwarf', 'halfling', 'human'],
         'chars': {

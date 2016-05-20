@@ -87,4 +87,7 @@ class CharacterGenerator:
             self.characteristics[char] += chars[char]
 
     def get_career(self):
-        pass
+        career = careers.STARTINTG_CAREERS[choice(careers.STARTINTG_CAREERS.keys())]
+        while self.race not in career['races_list']:
+            career = careers.STARTINTG_CAREERS[choice(careers.STARTINTG_CAREERS.keys())]
+        self.career = career
