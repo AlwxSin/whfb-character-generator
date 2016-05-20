@@ -49,6 +49,15 @@ def get_talents_halfling():
 
     return talents
 
+def get_talents_human():
+    talents = []
+    keys = set()
+    while len(keys) < 2:
+        keys.add(choice(RANDOM_TALENTS.keys()))
+    for key in keys:
+        talents.append(RANDOM_TALENTS[key])
+    return talents
+
 RACE_TALENTS = {
     'dwarf': [
         OTHER_TALENTS['Dwarfcraft'], OTHER_TALENTS['Grudge-born Fury'],
@@ -66,5 +75,6 @@ RACE_TALENTS = {
         ],
         RANDOM_TALENTS['Excellent Vision'], RANDOM_TALENTS['Night Vision']
     ],
-    'halfling': get_talents_halfling()
+    'halfling': get_talents_halfling(),
+    'human': get_talents_human()
 }

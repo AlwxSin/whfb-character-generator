@@ -10,6 +10,9 @@ class CharacterGenerator:
 
     characteristics = {}
     cosmetics = {}
+    skills =[]
+    talents = []
+    career = None
 
     def __init__(self, race, sex):
         if race in self.races_list and sex in self.sex_list:
@@ -71,10 +74,7 @@ class CharacterGenerator:
         self.cosmetics['name'] = choice(names.BASE_NAMES[self.sex][self.race])
 
     def get_skills(self):
-        pass
-
-    def apply_skill(self):
-        pass
+        self.skills = skills.BASE_SKILLS[self.race]
 
     def get_talents(self):
         pass
